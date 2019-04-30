@@ -4,6 +4,8 @@ attr_accessor :name
 
 @@all = []
 
+
+
 def initialize(name)
   @name = name
   @@all << self
@@ -14,7 +16,7 @@ def pass_student(student, name)
     test.name == name && test.student == student && test.instructor == self
   end
    if result == nil
-     BoatingTest.new(student, name, status = "passed", self)
+     BoatingTest.new(student, name, "passed" , self)
 
    else
        result.status = "passed"

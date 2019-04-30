@@ -1,3 +1,5 @@
+require 'pry'
+
 class Student
 
   attr_accessor :first_name
@@ -30,9 +32,9 @@ class Student
 
     array_passed = array.select {|pass| pass.status == "passed"}
 
-    grade = (array_passed.length.to_f / array.length)
+    grade = ((array_passed.length.to_f / array.length)*100).round(2)
 
-    grade
+    #  grade.round(2)
 
 
     #should return the percentage of tests that the student has passed, a Float (so if a student has passed 3 / 9 tests that they've taken, this method should return the Float 33.33)
